@@ -235,7 +235,7 @@ try {
                 <?php foreach ($articles as $article): ?>
                     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
                         <?php if (!empty($article['gambar'])): ?>
-                            <img src="assets/image/<?php echo htmlspecialchars($article['gambar']); ?>"
+                            <img src="./assets/image/<?php echo htmlspecialchars($article['gambar']); ?>"
                                 alt="<?php echo htmlspecialchars($article['judul']); ?>"
                                 class="w-full h-48 object-cover">
                         <?php endif; ?>

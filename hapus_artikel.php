@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['confirm_delete'])) {
 
         // 1. Dapatkan nama file gambar sebelum dihapus dari database
         $gambar_file = $article['gambar'];
-        $gambar_path = 'assets/image/' . $gambar_file;
+        $gambar_path = './assets/image/' . $gambar_file;
 
         // 2. Hapus relasi dari artikel_kategori (jika ada)
         $stmt_kategori = $pdo->prepare("DELETE FROM artikel_kategori WHERE id_artikel = :artikel_id");

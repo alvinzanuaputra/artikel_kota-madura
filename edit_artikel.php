@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $artikel) {
 
             // 2. Handle upload gambar (jika ada file baru diupload)
             if (isset($_FILES['gambar']) && $_FILES['gambar']['error'] == UPLOAD_ERR_OK) {
-                $target_dir = "assets/image/"; // Lokasi penyimpanan gambar
+                $target_dir = "./assets/image/"; // Lokasi penyimpanan gambar
                 $file_extension = pathinfo($_FILES['gambar']['name'], PATHINFO_EXTENSION);
                 $new_file_name = 'gambar_artikel_' . $artikel_id . '.' . $file_extension; // Nama file final
                 $target_file = $target_dir . $new_file_name;
@@ -236,7 +236,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $artikel) {
                         <?php if (!empty($artikel['gambar'])): ?>
                             <div class="mb-3">
                                 <p class="text-gray-600 text-sm">Gambar saat ini:</p>
-                                <img src="assets/image/<?php echo htmlspecialchars($artikel['gambar']); ?>" alt="Gambar Artikel" class="max-w-xs h-auto rounded-md shadow-sm">
+                                <img src="./assets/image/<?php echo htmlspecialchars($artikel['gambar']); ?>" alt="Gambar Artikel" class="max-w-xs h-auto rounded-md shadow-sm">
                             </div>
                         <?php endif; ?>
                         <input type="file" id="gambar" name="gambar" 

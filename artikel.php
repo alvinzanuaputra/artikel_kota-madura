@@ -241,7 +241,7 @@ $categoryList = $stmt_categories->fetchAll();
                                     <a href="artikel.php?id=<?php echo $related['id']; ?>" class="block group">
                                         <div class="flex space-x-3">
                                             <?php if (!empty($related['gambar'])): ?>
-                                                <img src="assets/image/<?php echo htmlspecialchars($related['gambar']); ?>"
+                                                <img src="./assets/image/<?php echo htmlspecialchars($related['gambar']); ?>"
                                                     alt="<?php echo htmlspecialchars($related['judul']); ?>"
                                                     class="w-20 h-16 object-cover rounded">
                                             <?php else: ?>
